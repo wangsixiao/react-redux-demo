@@ -1,3 +1,12 @@
 {
-  'presets': ['latest', "react"]
+  'presets': ['latest', "react"],
+  'plugins': [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ]
+  ]
 }

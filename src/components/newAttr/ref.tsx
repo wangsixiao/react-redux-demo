@@ -4,6 +4,7 @@ interface Iprops{
 
 }
 interface Istate{
+  index: number
 }
 
 export default class extends Component<Iprops,Istate>{
@@ -13,6 +14,9 @@ export default class extends Component<Iprops,Istate>{
   // checkRef:HTMLInputElement
   constructor(props:any){
     super(props);
+    this.state = {
+      index: 0
+    }
   }
 
   componentDidMount(){
@@ -29,18 +33,23 @@ export default class extends Component<Iprops,Istate>{
     // console.log(sum)
   }
 
-  getData(){
+  getData() {
     // !操作符表示该变量此时
     // const data = this.textRef.current!.value
     // console.log(data)
     // const checkdata = this.checkRef.current!.value
     // console.log(checkdata)
+    // this.state.index = 3
+    this.setState({
+      index: this.state.index
+    })
   }
   
   render() {
     return (
       <div>
         <input type="text" ref={this.textRef}/>
+        <p>{this.state.index}</p>
         {/* <input type="checkbox" ref={(ele) => (this.checkRef = ele)}/> */}
         <button onClick={this.getData}>click</button>
       </div>

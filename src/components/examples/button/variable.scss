@@ -1,0 +1,190 @@
+$Sh-1: 0px 0px 8px 0px rgba(0, 0, 0, 0.03);
+$Sh-2: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+$Sh-3: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
+$Sh-4: -4px 0px 20px 0px rgba(0, 0, 0, 0.10);
+$Sh-5: 0px 2px 20px 0px rgba(0, 0, 0, 0.30);
+
+$S1:rgb(0, 79, 158);
+$S2:rgb(16, 110, 204);
+$S3:rgb(29, 134, 240);
+$S4:rgb(92, 173, 255);
+$S5:rgb(133, 194, 255);
+$S6:rgb(194, 224, 255);
+$M1:rgb(14, 17, 20);
+$M2:rgb(51, 56, 61);
+$M3:rgb(86, 94, 102);
+$M4:rgb(131, 137, 143);
+$M5:rgb(191, 195, 199);
+$M6:rgb(230, 232, 235);
+$M7:rgb(240, 242, 245);
+$M8:rgb(250, 251, 252);
+$M9:rgb(255, 255, 255);
+$M10:rgb(0, 0, 0);
+$F-blue:#29B8ff;
+$F-green:#46CF84;
+$F-yellow:#FFA42E;
+$F-red:#FF475A;
+$D1:#FAC105;
+$D2:#FFAB24;
+$D3:#FF6952;
+$D4:#FF3C73;
+$D5:#EE62D5;
+$D6:#8475FF;
+$D7:#4F73FF;
+$D8:#2E9CFF;
+$D9:#0CC0C9;
+$D10:#0CC991;
+$D11:#83D615;
+$D1-1:#FEF8E5;
+$D2-1:#FFF6E9;
+$D3-1:#FFF0ED;
+$D4-1:#FFEBF1;
+$D5-1:#FDEFFA;
+$D6-1:#F2F1FF;
+$D7-1:#EDF1FF;
+$D8-1:#EAF5FF;
+$D9-1:#E6F8F9;
+$D10-1:#E9F9F3;
+$D11-1:#F2FAE7;
+$Sp-1: 2px;
+$Sp-2: 4px;
+$Sp-3: 8px;
+$Sp-4: 10px;
+$Sp-5: 12px;
+$Sp-6: 16px;
+$Sp-7: 20px;
+$Sp-8: 24px;
+$Sp-9: 30px;
+$Sp-10: 32px;
+$Sp-11: 40px;
+$Ra-1: 2px;
+$Ra-2: 3px;
+$Ra-3: 6px;
+$Ra-4: 10px;
+$Ra-5: 100px;
+
+
+$modalZindex: 1100;
+$unmodelZindex: 1200;
+$popoverZindex: 1300;
+$popconfirmZindex: 1300;
+$messageZindex: 1400;
+$tooltipZindex: 1500;
+
+$FsN1: 12;
+$FsN2: 14;
+$FsN3: 16;
+$FsN4: 18;
+$FsN5: 20;
+$FsN6: 24;
+$FsN7: 28;
+$FsN8: 32;
+$rootPreCls:"phoenix";
+$regular: 'normal';
+$medium: 600;
+$family: "PingFang SC",
+"Hiragino Sans GB",
+STHeitiSC,
+Helvetica,
+"Helvetica Neue",
+"Microsoft YaHei",
+Tahoma;
+
+//用于为所有组件的最外层容器设置一些统一的样式，所有组件外层容器需引入此
+@mixin styleWrapperCommon {
+    @include smoothing;
+}
+
+@mixin smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin Fs-1 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@mixin Fs-2 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin Fs-3 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin Fs-4 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+@mixin Fs-5 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@mixin Fs-6 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@mixin Fs-7 {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+@mixin Fs-8 {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+@mixin scrollBar {
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+
+        &-track {
+            border-radius: $Ra-5;
+            background-color: transparent;
+        }
+
+        &-thumb {
+            border: 2px solid transparent;
+            border-radius: $Ra-5;
+            background-color: rgba($M1, 0.1);
+            background-clip: content-box;
+
+            &:hover {
+                background-color: rgba($M1, 0.3);
+            }
+        }
+    }
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@function hexToRgb($color) {
+    @return rgb(red($color), green($color), blue($color));
+}
+
+@function hexToRgba($color, $alpha) {
+    @return rgba(red($color), green($color), blue($color), $alpha);
+}

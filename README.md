@@ -49,3 +49,8 @@ yarn add babel-loader node-sass sass-loader style-loader css-loader --dev
 ```
 yarn add @types/react @types/react-dom --dev
 ```
+
+#### 7）redux
+```
+yarn add redux react-redux redux-thunk
+```

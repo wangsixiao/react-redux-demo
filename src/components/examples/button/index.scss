@@ -1,0 +1,97 @@
+@import './variable';
+$parCls: 'react';
+.#{$parCls}-button{
+  display: inline-block;
+  &__wrapper{
+    box-sizing: border-box;
+    // 水平垂直居中
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // 文字超出省略号
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    // transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    // 类型
+    &--primary{
+      color: $M9;
+      background-color: $S3;
+      &:hover{
+        background-color: $S4;
+      }
+      &:active{
+        background-color: $S2;
+      }
+    }
+    &--secondary{
+      color: $S2;
+      border: 1px solid $S5;
+      background-color: $M9;
+      &:hover{
+        color: $S3;
+        background-color: rgba($S5, 0.1);
+      }
+      &:active{
+        color: $S2;
+        background-color: rgba($S5, 0.2);
+        border: 1px solid $S5;
+      }
+    }
+    &--normal{
+      color: $M2;
+      border: 1px solid $M6;
+      background-color: $M9;
+      &:hover{
+        color: $S2;
+        border: 1px solid $S5;
+        background-color: rgba($S5, 0.1);
+      }
+      &:active{
+        color: $S2;
+        border: 1px solid $S5;
+        background-color: rgba($S5, 0.2);
+      }
+    }
+    // 大小
+    &--super{
+      min-width: 98px;
+      height: 40px;
+      padding: 0 $Sp-9 0 $Sp-9;
+      @include Fs-4;
+    }
+    &--big {
+      min-width: 62px;
+      height: 32px;
+      padding: 0 $Sp-6 0 $Sp-6;
+      font-size: 14px;
+    }
+    &--middle {
+      min-width: 50px;
+      height: 30px;
+      padding: 0 $Sp-5 0 $Sp-5;
+      @include Fs-1;
+    }
+    &--small {
+      min-width: 46px;
+      height: 26px;
+      padding: 0 $Sp-4 0 $Sp-4;
+      @include Fs-1;
+    }
+    // disable
+    &--disable {
+      cursor: not-allowed;
+      background-color: rgba($S3, 0.5);
+      &:hover {
+        background-color: rgba($S3, 0.5);
+      }
+      &:active {
+        background-color: rgba($S3, 0.5);
+      }
+    }
+  }
+}

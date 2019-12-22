@@ -4,8 +4,7 @@ const webpack = require("webpack")
 const  HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   // 入口文件
-  // entry: './src/redux/index.js',
-  entry: './src/components/index.tsx',
+  entry: './src/index.tsx',
   // 打包生成文件
   output: {
     path: __dirname,
@@ -15,12 +14,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test:/\.js$/,
+        test:/\.jsx?$/,
         use:{
              loader:"babel-loader",
+             exclude: /(node_modules)/, // 排除文件
              options:{
                 presets:["@babel/env","@babel/react"],
-                plugins: ['@babel/plugin-proposal-class-properties']
+                plugins: [
+                  ["@babel/plugin-proposal-decorators", { "legacy": true }], // 装饰器语法
+                  ["@babel/plugin-proposal-class-properties", { "loose": true }], // 支持 class 语法
+                  "@babel/plugin-transform-runtime", // 运行时，支持 promise 或 gen*
+                  "@babel/plugin-syntax-dynamic-import", // 支持 import then 语法
+                ]
               }
             }
       },
