@@ -691,46 +691,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@beisen-phoenix/button@^3.3.145":
-  version "3.3.145"
-  resolved "http://npm.beisencorp.com/repository/npm-group/@beisen-phoenix/button/-/button-3.3.145.tgz#170c4f38c214a74724947f6dc6f565b7b2f5481d"
-  dependencies:
-    "@beisen-phoenix/common-utils" "^3.3.142-beta.1"
-    "@beisen-phoenix/css-var-polyfill" "^3.3.142-beta.1"
-    "@beisen-phoenix/icon" "^3.2.54"
-    "@beisen-phoenix/style-token" "^3.3.142-beta.1"
-    "@beisen-phoenix/tooltip" "^3.3.142-beta.1"
-
-"@beisen-phoenix/common-utils@^3.3.142-beta.1":
-  version "3.3.142"
-  resolved "http://npm.beisencorp.com/repository/npm-group/@beisen-phoenix/common-utils/-/common-utils-3.3.142.tgz#af3af466dec38c5cd336bfc9bcd36d7e0c26d60b"
-  dependencies:
-    memoize-one "^5.1.1"
-    react-bem-helper "^1.4.1"
-
-"@beisen-phoenix/css-var-polyfill@^3.3.142-beta.1":
-  version "3.3.142"
-  resolved "http://npm.beisencorp.com/repository/npm-group/@beisen-phoenix/css-var-polyfill/-/css-var-polyfill-3.3.142.tgz#212ffddc2e8c840809a9380acc1f7da5e55c88b9"
-  dependencies:
-    css-vars-ponyfill "2.1.2"
-
-"@beisen-phoenix/icon@^3.2.54":
-  version "3.2.62"
-  resolved "http://npm.beisencorp.com/repository/npm-group/@beisen-phoenix/icon/-/icon-3.2.62.tgz#02739113a2fab973ce942f1310eaafd2701b7f08"
-
-"@beisen-phoenix/style-token@^3.3.142", "@beisen-phoenix/style-token@^3.3.142-beta.1":
-  version "3.3.142"
-  resolved "http://npm.beisencorp.com/repository/npm-group/@beisen-phoenix/style-token/-/style-token-3.3.142.tgz#bdff9b3296892500c826e172d5e78d5d6af45fc6"
-  dependencies:
-    typescript "^3.3.3"
-
-"@beisen-phoenix/tooltip@^3.3.142-beta.1":
-  version "3.3.142"
-  resolved "http://npm.beisencorp.com/repository/npm-group/@beisen-phoenix/tooltip/-/tooltip-3.3.142.tgz#6a8d8508db24018af84ae730d378f7a41bf90927"
-  dependencies:
-    "@beisen-phoenix/style-token" "^3.3.142"
-    rc-tooltip "^3.7.3"
-
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.npmjs.org/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -1873,10 +1833,6 @@ css-select@^1.1.0:
     domutils "1.5.1"
     nth-check "~1.0.1"
 
-css-vars-ponyfill@2.1.2:
-  version "2.1.2"
-  resolved "http://npm.beisencorp.com/repository/npm-group/css-vars-ponyfill/-/css-vars-ponyfill-2.1.2.tgz#0de2e49e72a6bac09cb456a0325c8584cadaecd2"
-
 css-what@2.1:
   version "2.1.3"
   resolved "https://registry.npmjs.org/css-what/-/css-what-2.1.3.tgz#a6d7604573365fe74686c3f311c56513d88285f2"
@@ -1935,8 +1891,8 @@ decamelize@^1.1.1, decamelize@^1.1.2, decamelize@^1.2.0:
   resolved "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
 
 deep-equal@^1.0.1:
   version "1.1.1"
@@ -3565,10 +3521,6 @@ mem@^4.0.0:
     mimic-fn "^2.0.0"
     p-is-promise "^2.0.0"
 
-memoize-one@^5.1.1:
-  version "5.1.1"
-  resolved "http://npm.beisencorp.com/repository/npm-group/memoize-one/-/memoize-one-5.1.1.tgz#047b6e3199b508eaec03504de71229b8eb1d75c0"
-
 memory-fs@^0.4.0, memory-fs@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npmjs.org/memory-fs/-/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
@@ -4811,7 +4763,7 @@ rc-time-picker@~3.7.1:
     rc-trigger "^2.2.0"
     react-lifecycles-compat "^3.0.4"
 
-rc-tooltip@^3.7.0, rc-tooltip@^3.7.3, rc-tooltip@~3.7.3:
+rc-tooltip@^3.7.0, rc-tooltip@~3.7.3:
   version "3.7.3"
   resolved "https://registry.npmjs.org/rc-tooltip/-/rc-tooltip-3.7.3.tgz#280aec6afcaa44e8dff0480fbaff9e87fc00aecc"
   dependencies:
@@ -5895,7 +5847,7 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@^3.3.3, typescript@^3.7.2:
+typescript@^3.7.2:
   version "3.7.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-3.7.3.tgz#b36840668a16458a7025b9eabfad11b66ab85c69"
 
